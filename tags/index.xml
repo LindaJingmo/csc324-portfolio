@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on CSC324 Portfolio</title>
+    <link>https://lindajingmo.github.io/csc324-portfolio/tags/</link>
+    <description>Recent content in Tags on CSC324 Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lindajingmo.github.io/csc324-portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstraction</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/tags/abstraction/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/tags/abstraction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/tags/database/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Schema Design</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/tags/schema-design/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/tags/schema-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/tags/sql/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/tags/sql/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
