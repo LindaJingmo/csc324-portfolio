@@ -22,5 +22,12 @@
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/</guid>
       <description>Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.</description>
     </item>
+    <item>
+      <title>Tutorial: Linking SQL to React</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/tutorial-sql-react/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/tutorial-sql-react/</guid>
+      <description>A step-by-step guide to connecting a SQL database to a React frontend through a backend API.</description>
+    </item>
   </channel>
 </rss>
