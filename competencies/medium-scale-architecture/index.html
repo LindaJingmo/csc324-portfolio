@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Medium-Scale Architecture | CSC324 Portfolio</title>
+<meta name="keywords" content="SQL, database, architecture, PostgreSQL">
+<meta name="description" content="Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.">
+<meta name="author" content="Linda Jing">
+<link rel="canonical" href="https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/">
+<link crossorigin="anonymous" href="/csc324-portfolio/assets/css/stylesheet.47e51c7d8489b002361bac156ce9a0a8776d08c5462c2cee95801efafdd90d35.css" integrity="sha256-R&#43;UcfYSJsAI2G6wVbOmgqHdtCMVGLCzulYAe&#43;v3ZDTU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lindajingmo.github.io/csc324-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lindajingmo.github.io/csc324-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lindajingmo.github.io/csc324-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lindajingmo.github.io/csc324-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lindajingmo.github.io/csc324-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/">
+  <meta property="og:site_name" content="CSC324 Portfolio">
+  <meta property="og:title" content="Medium-Scale Architecture">
+  <meta property="og:description" content="Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="competencies">
+    <meta property="article:published_time" content="2026-04-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-26T00:00:00+00:00">
+    <meta property="article:tag" content="SQL">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="PostgreSQL">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Medium-Scale Architecture">
+  <meta name="twitter:description" content="Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Competencies",
+      "item": "https://lindajingmo.github.io/csc324-portfolio/competencies/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Medium-Scale Architecture",
+      "item": "https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Medium-Scale Architecture",
+  "name": "Medium-Scale Architecture",
+  "description": "Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.",
+  "keywords": [
+    "SQL", "database", "architecture", "PostgreSQL"
+  ],
+  "articleBody": "For medium-scale architecture, I would use the database-side architecture of the project as my example. I designed and wrote the core SQL schema structure in 00_core_schema.sql, and I also wrote the major seed files that follow this structure. Instead of storing every major in a completely different format, the project uses one shared relational database architecture. Each major file inserts its courses, requirement blocks, course options, and special group logic into the same set of tables.\nThis architecture is visible in 00_core_schema.sql, where the project defines shared tables such as courses, majors, requirement_blocks, block_course_options, block_or_children, subfields, and course_subfields. Then individual major files, such as computerscience.sql and anthropology.sql, use those tables to represent their own degree requirements.\nRefer to the whole sql folder.\n1. What architectural pattern does your program employ? My part of the program uses a normalized relational database architecture. The main idea is that the planner stores academic information as connected tables instead of as separate hard-coded objects for each major. Courses, majors, requirements, requirement options, and subfields are separated into different tables, and the relationships between them are represented through primary keys, foreign keys, and join tables.\nFor example, the courses table stores course information once, while requirement_blocks stores the general requirement units. The block_course_options table connects a requirement block to the courses that can satisfy it. This follows a normalized relational pattern because course information is not repeated inside every requirement. Instead, requirements refer back to shared course records.\nThis architecture also supports different relationship types. A major has many requirement blocks. A requirement block can have many course options. Some requirements can branch into multiple valid paths through block_or_children. Some courses can also belong to subfields through course_subfields. This makes the SQL structure more flexible than a flat table or a separate file format for every major.\n2. What components result from this pattern in your program? This pattern creates several main database components.\nThe first component is the course catalog layer. This is represented by the courses table in 00_core_schema.sql. It stores general course information such as department, course number, course code, title, credits, level, and active status. This lets different majors reuse the same course records instead of duplicating them.\nThe second component is the major layer. This is represented by the majors table. Each major seed file inserts a major into this table, such as CSC for Computer Science or ANTH for Anthropology. This gives every requirement block a major to belong to.\nThe third component is the requirement layer. This is represented by the requirement_blocks table. Each row is one degree requirement, such as a required course, a choose-one category, a choose-n category, a credit requirement, or a custom rule. The rule_type column controls what kind of requirement it is.\nThe fourth component is the course-option layer. This is represented by block_course_options. It connects requirement blocks to the courses that can satisfy them. For example, a choose-one requirement can point to several possible courses without duplicating the requirement itself.\nThe fifth component is the branching layer. This is represented by block_or_children. This table lets one parent requirement represent an either/or structure by pointing to child requirement blocks. This is useful for requirements where students can complete one of multiple valid paths.\nThe sixth component is the subfield layer. This is represented by subfields and course_subfields. This part is useful for majors like Anthropology, where courses may count toward different subfields such as archaeology, biological anthropology, cultural anthropology, or linguistic anthropology.\n3. What technologies and/or libraries make up each of the components? The architecture is built with SQL using a PostgreSQL-style relational design. The core schema is written in 00_core_schema.sql, and the data for each major is written in separate .sql seed files inside the sql/majors/ folder.\nThe main technology is SQL itself, especially relational tables, primary keys, foreign keys, unique constraints, check constraints, and join tables. For example, block_course_options is a join table between requirement blocks and courses. course_subfields is another join table between courses and subfields.\nThe major files also use repeatable SQL seed patterns such as INSERT INTO … SELECT … JOIN … and ON CONFLICT DO NOTHING. This allows the seed files to be rerun without duplicating existing rows. That is important because the database can be rebuilt or updated while keeping the same architecture.\nOverall, this architecture makes the project more scalable. To add a new major, I do not need to invent a new data format. I can add a new major seed file that inserts courses and requirement blocks into the existing tables. The structure of the program stays consistent even when the academic requirements are different across majors.\n",
+  "wordCount" : "774",
+  "inLanguage": "en",
+  "datePublished": "2026-04-26T00:00:00Z",
+  "dateModified": "2026-04-26T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Linda Jing"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CSC324 Portfolio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lindajingmo.github.io/csc324-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://lindajingmo.github.io/csc324-portfolio/" accesskey="h" title="CSC324 Portfolio (Alt + H)">CSC324 Portfolio</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://lindajingmo.github.io/csc324-portfolio/competencies/" title="Competencies">
+                    <span>Competencies</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lindajingmo.github.io/csc324-portfolio/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    <a href='https://lindajingmo.github.io/csc324-portfolio/'>Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="https://lindajingmo.github.io/csc324-portfolio/competencies/">Competencies</a></nav>
+    <h1 class="post-title entry-hint-parent">
+      Medium-Scale Architecture
+    </h1>
+    <div class="post-meta"><span title='2026-04-26 00:00:00 +0000 UTC'>April 26, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><p>For medium-scale architecture, I would use the database-side architecture of the project as my example. I designed and wrote the core SQL schema structure in 00_core_schema.sql, and I also wrote the major seed files that follow this structure. Instead of storing every major in a completely different format, the project uses one shared relational database architecture. Each major file inserts its courses, requirement blocks, course options, and special group logic into the same set of tables.</p>
+<p>This architecture is visible in 00_core_schema.sql, where the project defines shared tables such as courses, majors, requirement_blocks, block_course_options, block_or_children, subfields, and course_subfields. Then individual major files, such as computerscience.sql and anthropology.sql, use those tables to represent their own degree requirements.</p>
+<p>Refer to the whole sql folder.</p>
+<h2 id="1-what-architectural-pattern-does-your-program-employ">1. What architectural pattern does your program employ?<a hidden class="anchor" aria-hidden="true" href="#1-what-architectural-pattern-does-your-program-employ">#</a></h2>
+<p>My part of the program uses a normalized relational database architecture. The main idea is that the planner stores academic information as connected tables instead of as separate hard-coded objects for each major. Courses, majors, requirements, requirement options, and subfields are separated into different tables, and the relationships between them are represented through primary keys, foreign keys, and join tables.</p>
+<p>For example, the courses table stores course information once, while requirement_blocks stores the general requirement units. The block_course_options table connects a requirement block to the courses that can satisfy it. This follows a normalized relational pattern because course information is not repeated inside every requirement. Instead, requirements refer back to shared course records.</p>
+<p>This architecture also supports different relationship types. A major has many requirement blocks. A requirement block can have many course options. Some requirements can branch into multiple valid paths through block_or_children. Some courses can also belong to subfields through course_subfields. This makes the SQL structure more flexible than a flat table or a separate file format for every major.</p>
+<h2 id="2-what-components-result-from-this-pattern-in-your-program">2. What components result from this pattern in your program?<a hidden class="anchor" aria-hidden="true" href="#2-what-components-result-from-this-pattern-in-your-program">#</a></h2>
+<p>This pattern creates several main database components.</p>
+<p>The first component is the course catalog layer. This is represented by the courses table in 00_core_schema.sql. It stores general course information such as department, course number, course code, title, credits, level, and active status. This lets different majors reuse the same course records instead of duplicating them.</p>
+<p>The second component is the major layer. This is represented by the majors table. Each major seed file inserts a major into this table, such as CSC for Computer Science or ANTH for Anthropology. This gives every requirement block a major to belong to.</p>
+<p>The third component is the requirement layer. This is represented by the requirement_blocks table. Each row is one degree requirement, such as a required course, a choose-one category, a choose-n category, a credit requirement, or a custom rule. The rule_type column controls what kind of requirement it is.</p>
+<p>The fourth component is the course-option layer. This is represented by block_course_options. It connects requirement blocks to the courses that can satisfy them. For example, a choose-one requirement can point to several possible courses without duplicating the requirement itself.</p>
+<p>The fifth component is the branching layer. This is represented by block_or_children. This table lets one parent requirement represent an either/or structure by pointing to child requirement blocks. This is useful for requirements where students can complete one of multiple valid paths.</p>
+<p>The sixth component is the subfield layer. This is represented by subfields and course_subfields. This part is useful for majors like Anthropology, where courses may count toward different subfields such as archaeology, biological anthropology, cultural anthropology, or linguistic anthropology.</p>
+<h2 id="3-what-technologies-andor-libraries-make-up-each-of-the-components">3. What technologies and/or libraries make up each of the components?<a hidden class="anchor" aria-hidden="true" href="#3-what-technologies-andor-libraries-make-up-each-of-the-components">#</a></h2>
+<p>The architecture is built with SQL using a PostgreSQL-style relational design. The core schema is written in 00_core_schema.sql, and the data for each major is written in separate .sql seed files inside the sql/majors/ folder.</p>
+<p>The main technology is SQL itself, especially relational tables, primary keys, foreign keys, unique constraints, check constraints, and join tables. For example, block_course_options is a join table between requirement blocks and courses. course_subfields is another join table between courses and subfields.</p>
+<p>The major files also use repeatable SQL seed patterns such as INSERT INTO &hellip; SELECT &hellip; JOIN &hellip; and ON CONFLICT DO NOTHING. This allows the seed files to be rerun without duplicating existing rows. That is important because the database can be rebuilt or updated while keeping the same architecture.</p>
+<p>Overall, this architecture makes the project more scalable. To add a new major, I do not need to invent a new data format. I can add a new major seed file that inserts courses and requirement blocks into the existing tables. The structure of the program stays consistent even when the academic requirements are different across majors.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/sql/">SQL</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/database/">Database</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/architecture/">Architecture</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/postgresql/">PostgreSQL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lindajingmo.github.io/csc324-portfolio/">CSC324 Portfolio</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

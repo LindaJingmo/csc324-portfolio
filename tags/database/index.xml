@@ -15,5 +15,12 @@
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-abstraction/</guid>
       <description>Designed a unified requirement_blocks table to abstract all major graduation requirements across 12 majors in a multi-major planner.</description>
     </item>
+    <item>
+      <title>Medium-Scale Architecture</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/</guid>
+      <description>Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.</description>
+    </item>
   </channel>
 </rss>
