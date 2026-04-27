@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tools For Artifact | CSC324 Portfolio</title>
+<meta name="keywords" content="tools, VS Code, PostgreSQL, React, Git">
+<meta name="description" content="Reflection on the development tools used to build, run, and debug the multi-major course planner.">
+<meta name="author" content="Linda Jing">
+<link rel="canonical" href="https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/">
+<link crossorigin="anonymous" href="/csc324-portfolio/assets/css/stylesheet.47e51c7d8489b002361bac156ce9a0a8776d08c5462c2cee95801efafdd90d35.css" integrity="sha256-R&#43;UcfYSJsAI2G6wVbOmgqHdtCMVGLCzulYAe&#43;v3ZDTU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lindajingmo.github.io/csc324-portfolio/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lindajingmo.github.io/csc324-portfolio/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lindajingmo.github.io/csc324-portfolio/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lindajingmo.github.io/csc324-portfolio/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lindajingmo.github.io/csc324-portfolio/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/">
+  <meta property="og:site_name" content="CSC324 Portfolio">
+  <meta property="og:title" content="Tools For Artifact">
+  <meta property="og:description" content="Reflection on the development tools used to build, run, and debug the multi-major course planner.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="competencies">
+    <meta property="article:published_time" content="2026-04-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-26T00:00:00+00:00">
+    <meta property="article:tag" content="Tools">
+    <meta property="article:tag" content="VS Code">
+    <meta property="article:tag" content="PostgreSQL">
+    <meta property="article:tag" content="React">
+    <meta property="article:tag" content="Git">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tools For Artifact">
+  <meta name="twitter:description" content="Reflection on the development tools used to build, run, and debug the multi-major course planner.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Competencies",
+      "item": "https://lindajingmo.github.io/csc324-portfolio/competencies/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Tools For Artifact",
+      "item": "https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tools For Artifact",
+  "name": "Tools For Artifact",
+  "description": "Reflection on the development tools used to build, run, and debug the multi-major course planner.",
+  "keywords": [
+    "tools", "VS Code", "PostgreSQL", "React", "Git"
+  ],
+  "articleBody": "Tools Used VS Code — main IDE used to write and edit SQL, React, and configuration files. VS Code Live Share — collaboration tool so teammates could inspect files and debug together in the same workspace. Git/GitHub — version control to track changes, share code, and prepare the project for submission. Integrated Terminal — used to run development commands without leaving VS Code. npm scripts — used to start repeatable project commands such as the frontend and backend. Vite — local React development server used to run the frontend at localhost:5173. Node/Express — backend runtime and API layer used to connect the React frontend to SQL data. PostgreSQL / psql — database and command-line tool used to create, seed, and validate the SQL-backed planner database. Browser / localhost — used to manually test the planner UI and check whether the frontend, backend, and database were connected correctly. 1. What development tools did you use through the process to help write code and automate the build/deployment process? For development infrastructure, I used VS Code, VS Code Live Share, Git/GitHub, the integrated terminal, npm scripts, Vite, Node/Express, and PostgreSQL. VS Code was my main IDE for editing SQL, React, and configuration files. VS Code Live Share helped with collaboration because teammates could inspect the same workspace and debug files together. Git/GitHub helped track project changes and share code with the team.\nFor running and validating the project locally, I used the terminal and npm scripts. The frontend could be started with npm run dev, the backend API with npm run server, and the database could be rebuilt with:\npsql -h localhost -d planner -f sql/99_run_all.sql These commands created a repeatable local deployment process because I could start each part of the system in a predictable way.\n2. What is one specific problem that you encountered while writing code? One specific problem I encountered was when the React planner showed that it could not load planner data from SQL. At first, it was hard to tell whether the problem came from the React frontend, the backend API, or the PostgreSQL database. Since the project had multiple layers running at the same time, one missing process could make the whole app appear broken.\nFor example, if the backend API was not running, the Vite frontend showed proxy errors like ECONNREFUSED. If the backend was running but the database settings were wrong, the API returned a database connection error. This made debugging confusing at first because the visible error appeared in the browser, but the real cause could be in a different part of the stack.\n3. How did your tools help or hinder your ability to address that problem? The tools helped because they let me debug the project layer by layer. The browser showed whether the React UI loaded. The Vite terminal showed frontend proxy errors. The backend terminal showed whether the API server started correctly. PostgreSQL and psql let me rebuild the database and confirm that the SQL files worked. Testing localhost:3001/api/health helped me check the backend separately from the frontend.\nVS Code Live Share also helped because a teammate could inspect the same SQL or configuration files while I ran the project commands. This made it easier to compare the browser error, terminal output, and database settings at the same time.\nThe tools also hindered debugging a little because there were many moving parts: Vite on localhost:5173, the API server on localhost:3001, and PostgreSQL on port 5432. If one part was not running, the error could look like a different problem. After this issue, I used a clearer debugging order: first check the frontend, then the API health route, then .env, then PostgreSQL, and finally the SQL seed files.\n",
+  "wordCount" : "618",
+  "inLanguage": "en",
+  "datePublished": "2026-04-26T00:00:00Z",
+  "dateModified": "2026-04-26T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Linda Jing"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CSC324 Portfolio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lindajingmo.github.io/csc324-portfolio/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://lindajingmo.github.io/csc324-portfolio/" accesskey="h" title="CSC324 Portfolio (Alt + H)">CSC324 Portfolio</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://lindajingmo.github.io/csc324-portfolio/competencies/" title="Competencies">
+                    <span>Competencies</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lindajingmo.github.io/csc324-portfolio/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    <a href='https://lindajingmo.github.io/csc324-portfolio/'>Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="https://lindajingmo.github.io/csc324-portfolio/competencies/">Competencies</a></nav>
+    <h1 class="post-title entry-hint-parent">
+      Tools For Artifact
+    </h1>
+    <div class="post-meta"><span title='2026-04-26 00:00:00 +0000 UTC'>April 26, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><h2 id="tools-used">Tools Used<a hidden class="anchor" aria-hidden="true" href="#tools-used">#</a></h2>
+<ul>
+<li><strong>VS Code</strong> — main IDE used to write and edit SQL, React, and configuration files.</li>
+<li><strong>VS Code Live Share</strong> — collaboration tool so teammates could inspect files and debug together in the same workspace.</li>
+<li><strong>Git/GitHub</strong> — version control to track changes, share code, and prepare the project for submission.</li>
+<li><strong>Integrated Terminal</strong> — used to run development commands without leaving VS Code.</li>
+<li><strong>npm scripts</strong> — used to start repeatable project commands such as the frontend and backend.</li>
+<li><strong>Vite</strong> — local React development server used to run the frontend at localhost:5173.</li>
+<li><strong>Node/Express</strong> — backend runtime and API layer used to connect the React frontend to SQL data.</li>
+<li><strong>PostgreSQL / psql</strong> — database and command-line tool used to create, seed, and validate the SQL-backed planner database.</li>
+<li><strong>Browser / localhost</strong> — used to manually test the planner UI and check whether the frontend, backend, and database were connected correctly.</li>
+</ul>
+<h2 id="1-what-development-tools-did-you-use-through-the-process-to-help-write-code-and-automate-the-builddeployment-process">1. What development tools did you use through the process to help write code and automate the build/deployment process?<a hidden class="anchor" aria-hidden="true" href="#1-what-development-tools-did-you-use-through-the-process-to-help-write-code-and-automate-the-builddeployment-process">#</a></h2>
+<p>For development infrastructure, I used VS Code, VS Code Live Share, Git/GitHub, the integrated terminal, npm scripts, Vite, Node/Express, and PostgreSQL. VS Code was my main IDE for editing SQL, React, and configuration files. VS Code Live Share helped with collaboration because teammates could inspect the same workspace and debug files together. Git/GitHub helped track project changes and share code with the team.</p>
+<p>For running and validating the project locally, I used the terminal and npm scripts. The frontend could be started with <code>npm run dev</code>, the backend API with <code>npm run server</code>, and the database could be rebuilt with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>psql -h localhost -d planner -f sql/99_run_all.sql
+</span></span></code></pre></div><p>These commands created a repeatable local deployment process because I could start each part of the system in a predictable way.</p>
+<h2 id="2-what-is-one-specific-problem-that-you-encountered-while-writing-code">2. What is one specific problem that you encountered while writing code?<a hidden class="anchor" aria-hidden="true" href="#2-what-is-one-specific-problem-that-you-encountered-while-writing-code">#</a></h2>
+<p>One specific problem I encountered was when the React planner showed that it could not load planner data from SQL. At first, it was hard to tell whether the problem came from the React frontend, the backend API, or the PostgreSQL database. Since the project had multiple layers running at the same time, one missing process could make the whole app appear broken.</p>
+<p>For example, if the backend API was not running, the Vite frontend showed proxy errors like <code>ECONNREFUSED</code>. If the backend was running but the database settings were wrong, the API returned a database connection error. This made debugging confusing at first because the visible error appeared in the browser, but the real cause could be in a different part of the stack.</p>
+<h2 id="3-how-did-your-tools-help-or-hinder-your-ability-to-address-that-problem">3. How did your tools help or hinder your ability to address that problem?<a hidden class="anchor" aria-hidden="true" href="#3-how-did-your-tools-help-or-hinder-your-ability-to-address-that-problem">#</a></h2>
+<p>The tools helped because they let me debug the project layer by layer. The browser showed whether the React UI loaded. The Vite terminal showed frontend proxy errors. The backend terminal showed whether the API server started correctly. PostgreSQL and psql let me rebuild the database and confirm that the SQL files worked. Testing <code>localhost:3001/api/health</code> helped me check the backend separately from the frontend.</p>
+<p>VS Code Live Share also helped because a teammate could inspect the same SQL or configuration files while I ran the project commands. This made it easier to compare the browser error, terminal output, and database settings at the same time.</p>
+<p>The tools also hindered debugging a little because there were many moving parts: Vite on localhost:5173, the API server on localhost:3001, and PostgreSQL on port 5432. If one part was not running, the error could look like a different problem. After this issue, I used a clearer debugging order: first check the frontend, then the API health route, then <code>.env</code>, then PostgreSQL, and finally the SQL seed files.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/tools/">Tools</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/vs-code/">VS Code</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/postgresql/">PostgreSQL</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/react/">React</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/git/">Git</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lindajingmo.github.io/csc324-portfolio/">CSC324 Portfolio</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

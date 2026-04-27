@@ -15,5 +15,12 @@
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-architecture/</guid>
       <description>Designed a normalized relational database architecture to support a multi-major degree planner at Grinnell College.</description>
     </item>
+    <item>
+      <title>Tools For Artifact</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</guid>
+      <description>Reflection on the development tools used to build, run, and debug the multi-major course planner.</description>
+    </item>
   </channel>
 </rss>
