@@ -26,6 +26,13 @@ abstraction, and compiler design throughout the course.&lt;/p&gt;</description>
       <description>Conducted a task-based user study to evaluate our functional MVP course planner.</description>
     </item>
     <item>
+      <title>Infrastructure</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</guid>
+      <description>Reflection on the infrastructure</description>
+    </item>
+    <item>
       <title>Medium-Scale Abstraction</title>
       <link>https://lindajingmo.github.io/csc324-portfolio/competencies/medium-scale-abstraction/</link>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
@@ -59,13 +66,6 @@ abstraction, and compiler design throughout the course.&lt;/p&gt;</description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/self-learning/</guid>
       <description>Reflection on building a tech tutorial connecting SQL to React through a backend API.</description>
-    </item>
-    <item>
-      <title>Tools For Artifact</title>
-      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</link>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</guid>
-      <description>Reflection on the development tools used to build, run, and debug the multi-major course planner.</description>
     </item>
     <item>
       <title>Tutorial: Linking SQL to React</title>

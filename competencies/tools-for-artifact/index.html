@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Tools For Artifact | CSC324 Portfolio</title>
+<title>Infrastructure | CSC324 Portfolio</title>
 <meta name="keywords" content="tools, VS Code, PostgreSQL, React, Git">
-<meta name="description" content="Reflection on the development tools used to build, run, and debug the multi-major course planner.">
+<meta name="description" content="Reflection on the infrastructure">
 <meta name="author" content="Linda Jing">
 <link rel="canonical" href="https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/">
 <link crossorigin="anonymous" href="/csc324-portfolio/assets/css/stylesheet.47e51c7d8489b002361bac156ce9a0a8776d08c5462c2cee95801efafdd90d35.css" integrity="sha256-R&#43;UcfYSJsAI2G6wVbOmgqHdtCMVGLCzulYAe&#43;v3ZDTU=" rel="preload stylesheet" as="style">
@@ -66,8 +66,8 @@
 
 </script><meta property="og:url" content="https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/">
   <meta property="og:site_name" content="CSC324 Portfolio">
-  <meta property="og:title" content="Tools For Artifact">
-  <meta property="og:description" content="Reflection on the development tools used to build, run, and debug the multi-major course planner.">
+  <meta property="og:title" content="Infrastructure">
+  <meta property="og:description" content="Reflection on the infrastructure">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="competencies">
@@ -80,8 +80,8 @@
     <meta property="article:tag" content="Git">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tools For Artifact">
-  <meta name="twitter:description" content="Reflection on the development tools used to build, run, and debug the multi-major course planner.">
+  <meta name="twitter:title" content="Infrastructure">
+  <meta name="twitter:description" content="Reflection on the infrastructure">
 
 
 <script type="application/ld+json">
@@ -98,7 +98,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Tools For Artifact",
+      "name": "Infrastructure",
       "item": "https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/"
     }
   ]
@@ -108,13 +108,13 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Tools For Artifact",
-  "name": "Tools For Artifact",
-  "description": "Reflection on the development tools used to build, run, and debug the multi-major course planner.",
+  "headline": "Infrastructure",
+  "name": "Infrastructure",
+  "description": "Reflection on the infrastructure",
   "keywords": [
     "tools", "VS Code", "PostgreSQL", "React", "Git"
   ],
-  "articleBody": "Tools Used VS Code — main IDE used to write and edit SQL, React, and configuration files. VS Code Live Share — collaboration tool so teammates could inspect files and debug together in the same workspace. Git/GitHub — version control to track changes, share code, and prepare the project for submission. Integrated Terminal — used to run development commands without leaving VS Code. npm scripts — used to start repeatable project commands such as the frontend and backend. Vite — local React development server used to run the frontend at localhost:5173. Node/Express — backend runtime and API layer used to connect the React frontend to SQL data. PostgreSQL / psql — database and command-line tool used to create, seed, and validate the SQL-backed planner database. Browser / localhost — used to manually test the planner UI and check whether the frontend, backend, and database were connected correctly. 1. What development tools did you use through the process to help write code and automate the build/deployment process? For development infrastructure, I used VS Code, VS Code Live Share, Git/GitHub, the integrated terminal, npm scripts, Vite, Node/Express, and PostgreSQL. VS Code was my main IDE for editing SQL, React, and configuration files. VS Code Live Share helped with collaboration because teammates could inspect the same workspace and debug files together. Git/GitHub helped track project changes and share code with the team.\nFor running and validating the project locally, I used the terminal and npm scripts. The frontend could be started with npm run dev, the backend API with npm run server, and the database could be rebuilt with:\npsql -h localhost -d planner -f sql/99_run_all.sql These commands created a repeatable local deployment process because I could start each part of the system in a predictable way.\n2. What is one specific problem that you encountered while writing code? One specific problem I encountered was when the React planner showed that it could not load planner data from SQL. At first, it was hard to tell whether the problem came from the React frontend, the backend API, or the PostgreSQL database. Since the project had multiple layers running at the same time, one missing process could make the whole app appear broken.\nFor example, if the backend API was not running, the Vite frontend showed proxy errors like ECONNREFUSED. If the backend was running but the database settings were wrong, the API returned a database connection error. This made debugging confusing at first because the visible error appeared in the browser, but the real cause could be in a different part of the stack.\n3. How did your tools help or hinder your ability to address that problem? The tools helped because they let me debug the project layer by layer. The browser showed whether the React UI loaded. The Vite terminal showed frontend proxy errors. The backend terminal showed whether the API server started correctly. PostgreSQL and psql let me rebuild the database and confirm that the SQL files worked. Testing localhost:3001/api/health helped me check the backend separately from the frontend.\nVS Code Live Share also helped because a teammate could inspect the same SQL or configuration files while I ran the project commands. This made it easier to compare the browser error, terminal output, and database settings at the same time.\nThe tools also hindered debugging a little because there were many moving parts: Vite on localhost:5173, the API server on localhost:3001, and PostgreSQL on port 5432. If one part was not running, the error could look like a different problem. After this issue, I used a clearer debugging order: first check the frontend, then the API health route, then .env, then PostgreSQL, and finally the SQL seed files.\n",
+  "articleBody": "Tools Used VS Code — main IDE used to write and edit SQL, React, and configuration files. VS Code Live Share — collaboration tool so teammates could inspect files and debug together in the same workspace. GitHub — version control to track changes, share code, and prepare the project for submission. Integrated Terminal — used to run development commands without leaving VS Code. npm scripts — used to start repeatable project commands such as the frontend and backend. Vite — local React development server used to run the frontend at localhost:5173. Node/Express — backend runtime and API layer used to connect the React frontend to SQL data. PostgreSQL / psql — database and command-line tool used to create, seed, and validate the SQL-backed planner database. Browser / localhost — used to manually test the planner UI and check whether the frontend, backend, and database were connected correctly. 1. What development tools did you use through the process to help write code and automate the build/deployment process? For development infrastructure, I used VS Code, VS Code Live Share, Git/GitHub, the integrated terminal, npm scripts, Vite, Node/Express, and PostgreSQL. VS Code was my main IDE for editing SQL, React, and configuration files. VS Code Live Share helped with collaboration because teammates could inspect the same workspace and debug files together. Git/GitHub helped track project changes and share code with the team.\nFor running and validating the project locally, I used the terminal and npm scripts. The frontend could be started with npm run dev, the backend API with npm run server, and the database could be rebuilt with:\npsql -h localhost -d planner -f sql/99_run_all.sql These commands created a repeatable local deployment process because I could start each part of the system in a predictable way.\n2. What is one specific problem that you encountered while writing code? One specific problem I encountered was when the React planner showed that it could not load planner data from SQL. At first, it was hard to tell whether the problem came from the React frontend, the backend API, or the PostgreSQL database. Since the project had multiple layers running at the same time, one missing process could make the whole app appear broken.\nFor example, if the backend API was not running, the Vite frontend showed proxy errors like ECONNREFUSED. If the backend was running but the database settings were wrong, the API returned a database connection error. This made debugging confusing at first because the visible error appeared in the browser, but the real cause could be in a different part of the stack.\n3. How did your tools help or hinder your ability to address that problem? The tools helped because they let me debug the project layer by layer. The browser showed whether the React UI loaded. The Vite terminal showed frontend proxy errors. The backend terminal showed whether the API server started correctly. PostgreSQL and psql let me rebuild the database and confirm that the SQL files worked. Testing localhost:3001/api/health helped me check the backend separately from the frontend.\nVS Code Live Share also helped because a teammate could inspect the same SQL or configuration files while I ran the project commands. This made it easier to compare the browser error, terminal output, and database settings at the same time.\nThe tools also hindered debugging a little because there were many moving parts: Vite on localhost:5173, the API server on localhost:3001, and PostgreSQL on port 5432. If one part was not running, the error could look like a different problem. After this issue, I used a clearer debugging order: first check the frontend, then the API health route, then .env, then PostgreSQL, and finally the SQL seed files.\n",
   "wordCount" : "618",
   "inLanguage": "en",
   "datePublished": "2026-04-26T00:00:00Z",
@@ -192,7 +192,7 @@
             </svg>
             <a href="https://lindajingmo.github.io/csc324-portfolio/competencies/">Competencies</a></nav>
     <h1 class="post-title entry-hint-parent">
-      Tools For Artifact
+      Infrastructure
     </h1>
     <div class="post-meta"><span title='2026-04-26 00:00:00 +0000 UTC'>April 26, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
 
@@ -202,7 +202,7 @@
 <ul>
 <li><strong>VS Code</strong> — main IDE used to write and edit SQL, React, and configuration files.</li>
 <li><strong>VS Code Live Share</strong> — collaboration tool so teammates could inspect files and debug together in the same workspace.</li>
-<li><strong>Git/GitHub</strong> — version control to track changes, share code, and prepare the project for submission.</li>
+<li><strong>GitHub</strong> — version control to track changes, share code, and prepare the project for submission.</li>
 <li><strong>Integrated Terminal</strong> — used to run development commands without leaving VS Code.</li>
 <li><strong>npm scripts</strong> — used to start repeatable project commands such as the frontend and backend.</li>
 <li><strong>Vite</strong> — local React development server used to run the frontend at localhost:5173.</li>
