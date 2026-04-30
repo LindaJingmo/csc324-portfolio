@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vitest on CSC324 Portfolio</title>
+    <link>https://lindajingmo.github.io/csc324-portfolio/tags/vitest/</link>
+    <description>Recent content in Vitest on CSC324 Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lindajingmo.github.io/csc324-portfolio/tags/vitest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing Strategies</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</guid>
+      <description>Unit testing the requirement-checking logic for the four-year course planner.</description>
+    </item>
+  </channel>
+</rss>
