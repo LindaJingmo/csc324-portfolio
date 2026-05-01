@@ -9,11 +9,11 @@
     <lastBuildDate>Thu, 30 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lindajingmo.github.io/csc324-portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project Journal Log</title>
-      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/journal/</link>
-      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/journal/</guid>
-      <description>A log of weekly progress and reflections throughout the CSC324 project.</description>
+      <title>Testing Strategies</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</guid>
+      <description>Unit testing the requirement-checking logic for the four-year course planner.</description>
     </item>
     <item>
       <title>Testing Infrastructure</title>
@@ -21,6 +21,48 @@
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-infrastructure/</guid>
       <description>Using npm scripts and Node&amp;rsquo;s test runner to make planner tests repeatable.</description>
+    </item>
+    <item>
+      <title>Ideation</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/ideation/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/ideation/</guid>
+      <description>Using personas to discover and pursue solutions to student course planning needs.</description>
+    </item>
+    <item>
+      <title>Collaboration</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Adv：Security</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Adv: Accessibility</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quality</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/quality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/quality/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project Journal Log</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/journal/</link>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/journal/</guid>
+      <description>A log of weekly progress and reflections throughout the CSC324 project.</description>
     </item>
     <item>
       <title>About</title>
@@ -38,13 +80,6 @@ abstraction, and compiler design throughout the course.&lt;/p&gt;</description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/evaluation/</guid>
       <description>Conducted a task-based user study to evaluate our functional MVP course planner.</description>
-    </item>
-    <item>
-      <title>Ideation</title>
-      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/ideation/</link>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/ideation/</guid>
-      <description>Using personas to discover and pursue solutions to student course planning needs.</description>
     </item>
     <item>
       <title>Infrastructure</title>
@@ -94,13 +129,6 @@ abstraction, and compiler design throughout the course.&lt;/p&gt;</description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/self-learning/</guid>
       <description>Reflection on building a tech tutorial connecting SQL to React through a backend API.</description>
-    </item>
-    <item>
-      <title>Testing Strategies</title>
-      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</link>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</guid>
-      <description>Unit testing the requirement-checking logic for the four-year course planner.</description>
     </item>
     <item>
       <title>Tutorial: Linking SQL to React</title>

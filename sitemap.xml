@@ -2,6 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-infrastructure/</loc>
+    <lastmod>2026-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/ideation/</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/</loc>
+  </url><url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/security/</loc>
+  </url><url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</loc>
+  </url><url>
+    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/quality/</loc>
+  </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/journal/</loc>
     <lastmod>2026-04-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -24,9 +41,6 @@
     <lastmod>2026-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/tags/testing/</loc>
-    <lastmod>2026-04-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-infrastructure/</loc>
     <lastmod>2026-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/tags/journal/</loc>
@@ -72,9 +86,6 @@
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/tags/hcd/</loc>
-    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/ideation/</loc>
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/tags/ideation/</loc>
@@ -135,9 +146,6 @@
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/tags/teamwork/</loc>
-    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/</loc>
     <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lindajingmo.github.io/csc324-portfolio/tags/tools/</loc>
