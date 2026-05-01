@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Testing Strategies | CSC324 Portfolio</title>
-<meta name="keywords" content="testing, unit tests, JavaScript, vitest">
+<meta name="keywords" content="testing, unit tests, JavaScript, coverage">
 <meta name="description" content="Unit testing the requirement-checking logic for the four-year course planner.">
 <meta name="author" content="Linda Jing">
 <link rel="canonical" href="https://lindajingmo.github.io/csc324-portfolio/competencies/testing-strategies/">
@@ -76,7 +76,7 @@
     <meta property="article:tag" content="Testing">
     <meta property="article:tag" content="Unit Tests">
     <meta property="article:tag" content="JavaScript">
-    <meta property="article:tag" content="Vitest">
+    <meta property="article:tag" content="Coverage">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Testing Strategies">
@@ -111,10 +111,10 @@
   "name": "Testing Strategies",
   "description": "Unit testing the requirement-checking logic for the four-year course planner.",
   "keywords": [
-    "testing", "unit tests", "JavaScript", "vitest"
+    "testing", "unit tests", "JavaScript", "coverage"
   ],
-  "articleBody": "\nThe component I was responsible for testing was the requirement-checking logic for the four-year planner. This logic decides whether the courses in a student’s plan satisfy a major requirement. My artifact for this competency is tests/requirementLogic.test.js.\n2. According to code coverage tools, what aspects of this component are covered with tests? I did not configure a formal percentage-based coverage tool such as Istanbul or Vitest coverage. However, my unit tests cover important branches of the requirement-checking logic, including:\nRequired-course checks Missing required courses Choose-one rules Choose-n rules Credit-counting rules The custom Computer Science math elective rule 3. What kinds of tests are they? They are unit tests. They test one isolated logic function without needing to start the React frontend, backend API, or PostgreSQL database. The tests create sample courses and requirement blocks, then check whether the requirement returns true or false for different planned course lists.\n4. For code that is not covered by tests, why did you not cover them? The code not covered includes the full React UI, the backend/database connection, and the exact auto-filled four-year schedule. I did not test the exact full schedule because there can be multiple valid four-year plans, so one fixed expected output would be too brittle. I also did not cover the full UI because it depends on browser interaction and visual behavior. Instead, I focused on smaller requirement rules with clear and consistent expected results.+++ date = ‘2026-04-30T11:15:09-05:00’ draft = true title = ‘Testing Strategies’ +++\n",
-  "wordCount" : "246",
+  "articleBody": "\n1. Identify a component of your project that you were responsible for testing. The component I was responsible for testing was the requirement-checking logic for the four-year planner. This logic decides whether the courses in a student’s plan satisfy a major requirement. My artifact for this competency is tests/requirementLogic.test.js.\nThis component is important because the planner does not only display courses; it also needs to decide whether a student’s selected courses actually complete requirements. For example, the logic checks whether a required course has been taken, whether one course from a choose-one group has been completed, whether enough courses from a choose-n group have been completed, whether enough credits have been counted, and whether the Computer Science math elective rule is satisfied.\n2. According to code coverage tools, what aspects of this component are covered with tests? I used Node’s built-in coverage tool by running:\nnode --test --experimental-test-coverage tests/requirementLogic.test.js According to the coverage report, the requirement logic tests reached:\nLine coverage: 87.10% Branch coverage: 75.00% Function coverage: 87.50% The tests cover the main requirement-checking paths, including:\nRequired-course checks Missing required courses Choose-one requirements Choose-n requirements Credit-counting requirements The custom Computer Science math elective rule Accepted math elective examples such as MAT-133 Rejected math elective examples such as MAT-131 Statistics courses such as STA-209 counting for the CS math elective The uncovered lines correspond to a more complex or_group requirement path. This path represents requirements where students can satisfy one of multiple possible paths. I did not fully cover that path with unit tests because it requires more complex multi-block requirement data and is better checked through full planner behavior and manual UI testing.\n3. What kinds of tests are they? They are unit tests. They test isolated requirement-checking logic without needing to start the React frontend, backend API, or PostgreSQL database. The tests create sample courses and sample requirement blocks, then check whether the requirement returns true or false for different planned course lists.\nFor example, one test checks that a must_take requirement for CSC-151 is completed when CSC-151 appears in the student’s plan. Another test checks that the CS math elective accepts MAT-133 but does not accept MAT-131. This makes the tests small, repeatable, and focused on one piece of behavior at a time.\n4. For code that is not covered by tests, why did you not cover it? The code not covered by these tests includes the full React UI, the backend/database connection, the exact auto-filled four-year schedule, and the more complex or_group requirement path.\nI did not test the exact full schedule because there can be multiple valid four-year plans for the same major. If I tested one exact auto-filled output, the test would be too brittle even when the planner produced another valid schedule. I also did not cover the full UI because it depends on browser interaction and visual behavior, which is better suited for manual testing or future end-to-end tests.\n",
+  "wordCount" : "486",
   "inLanguage": "en",
   "datePublished": "2026-04-26T00:00:00Z",
   "dateModified": "2026-04-26T00:00:00Z",
@@ -193,32 +193,42 @@
     <h1 class="post-title entry-hint-parent">
       Testing Strategies
     </h1>
-    <div class="post-meta"><span title='2026-04-26 00:00:00 +0000 UTC'>April 26, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
+    <div class="post-meta"><span title='2026-04-26 00:00:00 +0000 UTC'>April 26, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
 
 </div>
   </header> 
   <div class="post-content md-content"><p><img alt="Test 1" loading="lazy" src="/csc324-portfolio/images/test1.png"></p>
 <p><img alt="Test 2" loading="lazy" src="/csc324-portfolio/images/test2.png"></p>
 <p><img alt="Test 3" loading="lazy" src="/csc324-portfolio/images/test3.png"></p>
+<h2 id="1-identify-a-component-of-your-project-that-you-were-responsible-for-testing">1. Identify a component of your project that you were responsible for testing.<a hidden class="anchor" aria-hidden="true" href="#1-identify-a-component-of-your-project-that-you-were-responsible-for-testing">#</a></h2>
 <p>The component I was responsible for testing was the requirement-checking logic for the four-year planner. This logic decides whether the courses in a student&rsquo;s plan satisfy a major requirement. My artifact for this competency is <code>tests/requirementLogic.test.js</code>.</p>
+<p>This component is important because the planner does not only display courses; it also needs to decide whether a student&rsquo;s selected courses actually complete requirements. For example, the logic checks whether a required course has been taken, whether one course from a choose-one group has been completed, whether enough courses from a choose-n group have been completed, whether enough credits have been counted, and whether the Computer Science math elective rule is satisfied.</p>
 <h2 id="2-according-to-code-coverage-tools-what-aspects-of-this-component-are-covered-with-tests">2. According to code coverage tools, what aspects of this component are covered with tests?<a hidden class="anchor" aria-hidden="true" href="#2-according-to-code-coverage-tools-what-aspects-of-this-component-are-covered-with-tests">#</a></h2>
-<p>I did not configure a formal percentage-based coverage tool such as Istanbul or Vitest coverage. However, my unit tests cover important branches of the requirement-checking logic, including:</p>
+<p>I used Node&rsquo;s built-in coverage tool by running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node --test --experimental-test-coverage tests/requirementLogic.test.js
+</span></span></code></pre></div><p>According to the coverage report, the requirement logic tests reached:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Line coverage: 87.10%
+</span></span><span style="display:flex;"><span>Branch coverage: 75.00%
+</span></span><span style="display:flex;"><span>Function coverage: 87.50%
+</span></span></code></pre></div><p>The tests cover the main requirement-checking paths, including:</p>
 <ul>
 <li>Required-course checks</li>
 <li>Missing required courses</li>
-<li>Choose-one rules</li>
-<li>Choose-n rules</li>
-<li>Credit-counting rules</li>
+<li>Choose-one requirements</li>
+<li>Choose-n requirements</li>
+<li>Credit-counting requirements</li>
 <li>The custom Computer Science math elective rule</li>
+<li>Accepted math elective examples such as <code>MAT-133</code></li>
+<li>Rejected math elective examples such as <code>MAT-131</code></li>
+<li>Statistics courses such as <code>STA-209</code> counting for the CS math elective</li>
 </ul>
+<p>The uncovered lines correspond to a more complex <code>or_group</code> requirement path. This path represents requirements where students can satisfy one of multiple possible paths. I did not fully cover that path with unit tests because it requires more complex multi-block requirement data and is better checked through full planner behavior and manual UI testing.</p>
 <h2 id="3-what-kinds-of-tests-are-they">3. What kinds of tests are they?<a hidden class="anchor" aria-hidden="true" href="#3-what-kinds-of-tests-are-they">#</a></h2>
-<p>They are unit tests. They test one isolated logic function without needing to start the React frontend, backend API, or PostgreSQL database. The tests create sample courses and requirement blocks, then check whether the requirement returns true or false for different planned course lists.</p>
-<h2 id="4-for-code-that-is-not-covered-by-tests-why-did-you-not-cover-them">4. For code that is not covered by tests, why did you not cover them?<a hidden class="anchor" aria-hidden="true" href="#4-for-code-that-is-not-covered-by-tests-why-did-you-not-cover-them">#</a></h2>
-<p>The code not covered includes the full React UI, the backend/database connection, and the exact auto-filled four-year schedule. I did not test the exact full schedule because there can be multiple valid four-year plans, so one fixed expected output would be too brittle. I also did not cover the full UI because it depends on browser interaction and visual behavior. Instead, I focused on smaller requirement rules with clear and consistent expected results.+++
-date = &lsquo;2026-04-30T11:15:09-05:00&rsquo;
-draft = true
-title = &lsquo;Testing Strategies&rsquo;
-+++</p>
+<p>They are unit tests. They test isolated requirement-checking logic without needing to start the React frontend, backend API, or PostgreSQL database. The tests create sample courses and sample requirement blocks, then check whether the requirement returns <code>true</code> or <code>false</code> for different planned course lists.</p>
+<p>For example, one test checks that a <code>must_take</code> requirement for <code>CSC-151</code> is completed when <code>CSC-151</code> appears in the student&rsquo;s plan. Another test checks that the CS math elective accepts <code>MAT-133</code> but does not accept <code>MAT-131</code>. This makes the tests small, repeatable, and focused on one piece of behavior at a time.</p>
+<h2 id="4-for-code-that-is-not-covered-by-tests-why-did-you-not-cover-it">4. For code that is not covered by tests, why did you not cover it?<a hidden class="anchor" aria-hidden="true" href="#4-for-code-that-is-not-covered-by-tests-why-did-you-not-cover-it">#</a></h2>
+<p>The code not covered by these tests includes the full React UI, the backend/database connection, the exact auto-filled four-year schedule, and the more complex <code>or_group</code> requirement path.</p>
+<p>I did not test the exact full schedule because there can be multiple valid four-year plans for the same major. If I tested one exact auto-filled output, the test would be too brittle even when the planner produced another valid schedule. I also did not cover the full UI because it depends on browser interaction and visual behavior, which is better suited for manual testing or future end-to-end tests.</p>
 
 
   </div>
@@ -228,7 +238,7 @@ title = &lsquo;Testing Strategies&rsquo;
       <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/testing/">Testing</a></li>
       <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/unit-tests/">Unit Tests</a></li>
       <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/javascript/">JavaScript</a></li>
-      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/vitest/">Vitest</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/coverage/">Coverage</a></li>
     </ul>
   </footer>
 </article>
