@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Collaboration | CSC324 Portfolio</title>
-<meta name="keywords" content="">
-<meta name="description" content="Collaboration - CSC324 Portfolio">
+<meta name="keywords" content="collaboration, GitHub, pull requests, code review">
+<meta name="description" content="Examples of collaborative work from our GitHub history.">
 <meta name="author" content="Linda Jing">
 <link rel="canonical" href="https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/">
 <link crossorigin="anonymous" href="/csc324-portfolio/assets/css/stylesheet.47e51c7d8489b002361bac156ce9a0a8776d08c5462c2cee95801efafdd90d35.css" integrity="sha256-R&#43;UcfYSJsAI2G6wVbOmgqHdtCMVGLCzulYAe&#43;v3ZDTU=" rel="preload stylesheet" as="style">
@@ -67,14 +67,20 @@
 </script><meta property="og:url" content="https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/">
   <meta property="og:site_name" content="CSC324 Portfolio">
   <meta property="og:title" content="Collaboration">
-  <meta property="og:description" content="CSC324 Programming Languages Portfolio – Grinnell College">
+  <meta property="og:description" content="Examples of collaborative work from our GitHub history.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="competencies">
+    <meta property="article:published_time" content="2026-05-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-02T00:00:00+00:00">
+    <meta property="article:tag" content="Collaboration">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="Pull Requests">
+    <meta property="article:tag" content="Code Review">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Collaboration">
-  <meta name="twitter:description" content="CSC324 Programming Languages Portfolio – Grinnell College">
+  <meta name="twitter:description" content="Examples of collaborative work from our GitHub history.">
 
 
 <script type="application/ld+json">
@@ -103,15 +109,15 @@
   "@type": "BlogPosting",
   "headline": "Collaboration",
   "name": "Collaboration",
-  "description": "",
+  "description": "Examples of collaborative work from our GitHub history.",
   "keywords": [
-    
+    "collaboration", "GitHub", "pull requests", "code review"
   ],
-  "articleBody": "",
-  "wordCount" : "0",
+  "articleBody": "Instance 1: Resolving a Bug Category: Filing and/or resolving a bug\nEvidence:\nIdentify the work you did in this instance. In this instance, I revised the prerequisite logic after code review feedback. The bug was that the planner could count or place a course before checking whether the student had completed the prerequisite. This was especially important for the Computer Science math requirement, because the planner could choose a 200-level math course that satisfied the math elective rule, even though the student might not actually be able to register for it yet. I updated the logic so course placement checks prerequisites before adding a course to the plan.\nDescribe the difficulties that necessitated communication with your peers in this instance. This required communication because the bug was not only a backend or frontend issue. It affected requirement checking, auto-fill behavior, and the user interface. A course could make a requirement look completed, but the overall plan could still be invalid because the prerequisite sequence was wrong. We had to discuss whether the issue came from the requirement checker, the prerequisite logic, or the way the frontend displayed completed requirements.\nDid you encounter any difficulties in collaboration with the team during this instance? If so, how did you resolve those difficulties? The main difficulty was that different teammates were working on different layers of the project, so the same bug looked different depending on where we saw it. To resolve this, we separated the problem into smaller pieces: whether a course counts for a requirement, whether it can be placed in that semester, and whether the UI shows the correct status. After that, I revised the prerequisite logic based on the review feedback.\nInstance 2: Filing a Pull Request of Linking database Category: Filing a pull request\nEvidence:\nIdentify the work you did in this instance. In this instance, I filed a pull request to connect the React planner with SQL-backed data. My work focused on moving the planner away from only using JSON and toward loading course, major, and requirement information from the SQL-backed structure. This included coordinating the database data with the frontend so the planner could display majors, courses, and requirement cards correctly.\nDescribe the difficulties that necessitated communication with your peers in this instance. This required communication because Drilon and Nahom were working mainly on the frontend and UI design, while I was working on the SQL/database side. The frontend needed a stable data shape to display courses and requirements, but the SQL connection was still being developed. We had to coordinate what information the frontend expected and how SQL data would eventually replace the temporary JSON data.\nDid you encounter any difficulties in collaboration with the team during this instance? If so, how did you resolve those difficulties? The main difficulty was that the frontend could not wait for the entire SQL connection to be finished. To avoid blocking the team, we used JSON as an intermediate data source so frontend development could continue. Once the SQL-backed data was ready, this PR helped integrate the SQL connection into the planner. Communication helped us make sure the frontend behavior still matched the new data source.\nInstance 3: Filing a Pull Request of Collaborative Feature Integration Category: Filing a pull request\nEvidence: Identify the work you did in this instance. In this instance, I filed a pull request for the prerequisite logic feature. My work was to make the planner consider prerequisite relationships when deciding whether a course could be placed into a semester. This was related to auto-fill and manual course placement because the planner needed to avoid creating a schedule where advanced courses appeared before their required earlier courses.\nDescribe the difficulties that necessitated communication with your peers in this instance. This required communication because prerequisite logic changes how the frontend planner behaves. If the logic blocks a course from being placed, the UI needs to make sense to the user. I had to coordinate with teammates working on the frontend so that the course placement behavior would still feel understandable and not just silently fail.\nDid you encounter any difficulties in collaboration with the team during this instance? If so, how did you resolve those difficulties? The main difficulty was deciding how strict the planner should be. If the planner is too permissive, it creates invalid schedules. If it is too strict without explanation, users may not understand why a course cannot be added. We resolved this by focusing first on the core logic: blocking courses when prerequisites were missing and allowing them when prerequisites were completed. Then the frontend could display or handle those placement results more clearly.\nInstance 4: Performing a Code Review Category: Performing a code review of a pull request\nEvidence:\n",
+  "wordCount" : "790",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2026-05-02T00:00:00Z",
+  "dateModified": "2026-05-02T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "Linda Jing"
@@ -187,13 +193,53 @@
     <h1 class="post-title entry-hint-parent">
       Collaboration
     </h1>
-    <div class="post-meta"><span>0 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
+    <div class="post-meta"><span title='2026-05-02 00:00:00 +0000 UTC'>May 2, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Linda Jing</span>
 
 </div>
   </header> 
+  <div class="post-content md-content"><h2 id="instance-1-resolving-a-bug">Instance 1: Resolving a Bug<a hidden class="anchor" aria-hidden="true" href="#instance-1-resolving-a-bug">#</a></h2>
+<p><strong>Category:</strong> Filing and/or resolving a bug</p>
+<p><strong>Evidence:</strong></p>
+<p><img alt="Instance 1 Evidence" loading="lazy" src="/csc324-portfolio/images/instance1.png"></p>
+<h3 id="identify-the-work-you-did-in-this-instance">Identify the work you did in this instance.<a hidden class="anchor" aria-hidden="true" href="#identify-the-work-you-did-in-this-instance">#</a></h3>
+<p>In this instance, I revised the prerequisite logic after code review feedback. The bug was that the planner could count or place a course before checking whether the student had completed the prerequisite. This was especially important for the Computer Science math requirement, because the planner could choose a 200-level math course that satisfied the math elective rule, even though the student might not actually be able to register for it yet. I updated the logic so course placement checks prerequisites before adding a course to the plan.</p>
+<h3 id="describe-the-difficulties-that-necessitated-communication-with-your-peers-in-this-instance">Describe the difficulties that necessitated communication with your peers in this instance.<a hidden class="anchor" aria-hidden="true" href="#describe-the-difficulties-that-necessitated-communication-with-your-peers-in-this-instance">#</a></h3>
+<p>This required communication because the bug was not only a backend or frontend issue. It affected requirement checking, auto-fill behavior, and the user interface. A course could make a requirement look completed, but the overall plan could still be invalid because the prerequisite sequence was wrong. We had to discuss whether the issue came from the requirement checker, the prerequisite logic, or the way the frontend displayed completed requirements.</p>
+<h3 id="did-you-encounter-any-difficulties-in-collaboration-with-the-team-during-this-instance-if-so-how-did-you-resolve-those-difficulties">Did you encounter any difficulties in collaboration with the team during this instance? If so, how did you resolve those difficulties?<a hidden class="anchor" aria-hidden="true" href="#did-you-encounter-any-difficulties-in-collaboration-with-the-team-during-this-instance-if-so-how-did-you-resolve-those-difficulties">#</a></h3>
+<p>The main difficulty was that different teammates were working on different layers of the project, so the same bug looked different depending on where we saw it. To resolve this, we separated the problem into smaller pieces: whether a course counts for a requirement, whether it can be placed in that semester, and whether the UI shows the correct status. After that, I revised the prerequisite logic based on the review feedback.</p>
+<h2 id="instance-2-filing-a-pull-request-of-linking-database">Instance 2: Filing a Pull Request of Linking database<a hidden class="anchor" aria-hidden="true" href="#instance-2-filing-a-pull-request-of-linking-database">#</a></h2>
+<p><strong>Category:</strong> Filing a pull request</p>
+<p><strong>Evidence:</strong></p>
+<p><img alt="Instance 2 Evidence" loading="lazy" src="/csc324-portfolio/images/instance2.png"></p>
+<h3 id="identify-the-work-you-did-in-this-instance-1">Identify the work you did in this instance.<a hidden class="anchor" aria-hidden="true" href="#identify-the-work-you-did-in-this-instance-1">#</a></h3>
+<p>In this instance, I filed a pull request to connect the React planner with SQL-backed data. My work focused on moving the planner away from only using JSON and toward loading course, major, and requirement information from the SQL-backed structure. This included coordinating the database data with the frontend so the planner could display majors, courses, and requirement cards correctly.</p>
+<h3 id="describe-the-difficulties-that-necessitated-communication-with-your-peers-in-this-instance-1">Describe the difficulties that necessitated communication with your peers in this instance.<a hidden class="anchor" aria-hidden="true" href="#describe-the-difficulties-that-necessitated-communication-with-your-peers-in-this-instance-1">#</a></h3>
+<p>This required communication because Drilon and Nahom were working mainly on the frontend and UI design, while I was working on the SQL/database side. The frontend needed a stable data shape to display courses and requirements, but the SQL connection was still being developed. We had to coordinate what information the frontend expected and how SQL data would eventually replace the temporary JSON data.</p>
+<h3 id="did-you-encounter-any-difficulties-in-collaboration-with-the-team-during-this-instance-if-so-how-did-you-resolve-those-difficulties-1">Did you encounter any difficulties in collaboration with the team during this instance? If so, how did you resolve those difficulties?<a hidden class="anchor" aria-hidden="true" href="#did-you-encounter-any-difficulties-in-collaboration-with-the-team-during-this-instance-if-so-how-did-you-resolve-those-difficulties-1">#</a></h3>
+<p>The main difficulty was that the frontend could not wait for the entire SQL connection to be finished. To avoid blocking the team, we used JSON as an intermediate data source so frontend development could continue. Once the SQL-backed data was ready, this PR helped integrate the SQL connection into the planner. Communication helped us make sure the frontend behavior still matched the new data source.</p>
+<h2 id="instance-3-filing-a-pull-request--of-collaborative-feature-integration">Instance 3: Filing a Pull Request  of Collaborative Feature Integration<a hidden class="anchor" aria-hidden="true" href="#instance-3-filing-a-pull-request--of-collaborative-feature-integration">#</a></h2>
+<p><strong>Category:</strong> Filing a pull request</p>
+<p><strong>Evidence:</strong>
+<img alt="Instance 3 Evidence" loading="lazy" src="/csc324-portfolio/images/instance3.png"></p>
+<h3 id="identify-the-work-you-did-in-this-instance-2">Identify the work you did in this instance.<a hidden class="anchor" aria-hidden="true" href="#identify-the-work-you-did-in-this-instance-2">#</a></h3>
+<p>In this instance, I filed a pull request for the prerequisite logic feature. My work was to make the planner consider prerequisite relationships when deciding whether a course could be placed into a semester. This was related to auto-fill and manual course placement because the planner needed to avoid creating a schedule where advanced courses appeared before their required earlier courses.</p>
+<h3 id="describe-the-difficulties-that-necessitated-communication-with-your-peers-in-this-instance-2">Describe the difficulties that necessitated communication with your peers in this instance.<a hidden class="anchor" aria-hidden="true" href="#describe-the-difficulties-that-necessitated-communication-with-your-peers-in-this-instance-2">#</a></h3>
+<p>This required communication because prerequisite logic changes how the frontend planner behaves. If the logic blocks a course from being placed, the UI needs to make sense to the user. I had to coordinate with teammates working on the frontend so that the course placement behavior would still feel understandable and not just silently fail.</p>
+<h3 id="did-you-encounter-any-difficulties-in-collaboration-with-the-team-during-this-instance-if-so-how-did-you-resolve-those-difficulties-2">Did you encounter any difficulties in collaboration with the team during this instance? If so, how did you resolve those difficulties?<a hidden class="anchor" aria-hidden="true" href="#did-you-encounter-any-difficulties-in-collaboration-with-the-team-during-this-instance-if-so-how-did-you-resolve-those-difficulties-2">#</a></h3>
+<p>The main difficulty was deciding how strict the planner should be. If the planner is too permissive, it creates invalid schedules. If it is too strict without explanation, users may not understand why a course cannot be added. We resolved this by focusing first on the core logic: blocking courses when prerequisites were missing and allowing them when prerequisites were completed. Then the frontend could display or handle those placement results more clearly.</p>
+<h2 id="instance-4-performing-a-code-review">Instance 4: Performing a Code Review<a hidden class="anchor" aria-hidden="true" href="#instance-4-performing-a-code-review">#</a></h2>
+<p><strong>Category:</strong> Performing a code review of a pull request</p>
+<p><strong>Evidence:</strong></p>
+
+
+  </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/collaboration/">Collaboration</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/github/">GitHub</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/pull-requests/">Pull Requests</a></li>
+      <li><a href="https://lindajingmo.github.io/csc324-portfolio/tags/code-review/">Code Review</a></li>
     </ul>
   </footer>
 </article>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pull Requests on CSC324 Portfolio</title>
+    <link>https://lindajingmo.github.io/csc324-portfolio/tags/pull-requests/</link>
+    <description>Recent content in Pull Requests on CSC324 Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lindajingmo.github.io/csc324-portfolio/tags/pull-requests/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collaboration</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/</link>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/collaboration/</guid>
+      <description>Examples of collaborative work from our GitHub history.</description>
+    </item>
+  </channel>
+</rss>
