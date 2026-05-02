@@ -6,8 +6,15 @@
     <description>Recent content in React on CSC324 Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lindajingmo.github.io/csc324-portfolio/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adv. Competency – Accessible Design</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</link>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</guid>
+      <description>Accessible design choices in the four-year planner interface.</description>
+    </item>
     <item>
       <title>Infrastructure</title>
       <link>https://lindajingmo.github.io/csc324-portfolio/competencies/tools-for-artifact/</link>

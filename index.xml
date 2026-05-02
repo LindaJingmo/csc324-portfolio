@@ -6,7 +6,7 @@
     <description>Recent content on CSC324 Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lindajingmo.github.io/csc324-portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing Strategies</title>
@@ -44,11 +44,11 @@
       <description>Analyzing the security surface area and threats of the Grinnell four-year course planner.</description>
     </item>
     <item>
-      <title>Adv: Accessibility</title>
+      <title>Adv. Competency – Accessible Design</title>
       <link>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/accessibility/</guid>
-      <description></description>
+      <description>Accessible design choices in the four-year planner interface.</description>
     </item>
     <item>
       <title>Quality</title>
