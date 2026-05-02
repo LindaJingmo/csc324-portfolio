@@ -6,7 +6,7 @@
     <description>Recent content in Testing on CSC324 Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lindajingmo.github.io/csc324-portfolio/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing Strategies</title>
@@ -21,6 +21,13 @@
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/testing-infrastructure/</guid>
       <description>Using npm scripts and Node&amp;rsquo;s test runner to make planner tests repeatable.</description>
+    </item>
+    <item>
+      <title>Quality</title>
+      <link>https://lindajingmo.github.io/csc324-portfolio/competencies/quality/</link>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://lindajingmo.github.io/csc324-portfolio/competencies/quality/</guid>
+      <description>An evaluation of the quality of the four-year planner codebase.</description>
     </item>
   </channel>
 </rss>
